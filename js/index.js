@@ -3,6 +3,8 @@ $(document).ready(() => {
 
     const optionToChoice = ['Rock', 'Paper', 'Scissor'];
     let uChoice;
+    let uScore = 0;
+    let cScore = 0;
 
     function wirteScores(userScore, computerScore){
         $('#userScore').text(userScore);
@@ -38,16 +40,16 @@ $(document).ready(() => {
         }
 
         switch(uHande){
-            case 'Papper':
+            case 'Paper':
                 if(cHand === 'Rock') {winner = 'User'}
                 if(cHand === 'Scissor') {winner = 'Computer'}
                 break;
             case 'Scissor':
-                if(cHand === 'Papper') {winner = 'User'}
+                if(cHand === 'Paper') {winner = 'User'}
                 if(cHand === 'Rock') {winner = 'Computer'}
                 break;
             case 'Rock':
-                if(cHand === 'Papper') {winner = 'Computer'}
+                if(cHand === 'Paper') {winner = 'Computer'}
                 if(cHand === 'Scissor') {winner = 'User'}
                 break;
         }
@@ -66,26 +68,27 @@ $(document).ready(() => {
         let handComputer = computerChoice();
   
         let winner = verifyWinner(handPlayer,handComputer);
-        let msg;
+        let msg = ' win this round.';
 
-        if(winner !== 'Tie'){
-            msg = ' win';
+        if(winner === 'Tie'){
+            msg = '';
         }
 
+        if(winner === 'User'){
+            uScore++;
+        }
 
+        if(winner === 'Computer'){
+            cScore++;
+        }
 
-        //clearScores();
-        //wirteScores(uScore,cScore);
+        clearScores();
+        wirteScores(uScore,cScore);
 
-        let output = `Player choice[ ${handPlayer} ] and Computer choice[ ${handComputer} ],  ${winner} ${msg} this round.`;
+        let output = `Player choice[ ${handPlayer} ] and Computer choice[ ${handComputer} ],  ${winner} ${msg}`;
         writeTheRound(output);
-        console.log(output);
     }    
 
    handEvent();
-
-
-
-    
 
 });
