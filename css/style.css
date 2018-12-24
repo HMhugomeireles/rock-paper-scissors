@@ -1,0 +1,28 @@
+.panel-top {
+    min-height: 100px;
+    background: #fff;
+    padding: 45px;
+}
+
+
+.panel-top > h1 {
+    font-size: 5rem;
+}
+
+.text-logo {
+    text-align: center;
+}
+
+.hands {
+    color: #FFC576;
+    font-size: 4rem;
+    border: 5px solid #fff;
+    padding: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.hands:hover {
+    background: #fff;
+}
