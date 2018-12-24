@@ -24,6 +24,9 @@ $(document).ready(() => {
         $('.roundsHistorys').append(elem);
     }
 
+    function userChoice(){
+            
+    }
 
     function game(){
         setup();
