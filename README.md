@@ -5,7 +5,7 @@
 
 # Webpage
 
-<a href="https://hmhugomeireles.github.io/rock-paper-scissors/">Play</a>
+<a href="https://hmhugomeireles.github.io/rock-paper-scissors/">Rock Paper Scissors</a>
 
 # Installing
 
